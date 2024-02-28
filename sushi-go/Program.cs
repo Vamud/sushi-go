@@ -1,3 +1,6 @@
+using sushi_go.Services;
+using sushi_go.Services.Interfaces;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.CreateUmbracoBuilder()
@@ -6,6 +9,8 @@ builder.CreateUmbracoBuilder()
     .AddDeliveryApi()
     .AddComposers()
     .Build();
+
+builder.Services.AddTransient<IRollsMenuService, RollsMenuService>();
 
 WebApplication app = builder.Build();
 
