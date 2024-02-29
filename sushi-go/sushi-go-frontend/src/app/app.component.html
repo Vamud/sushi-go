@@ -1,1 +1,7 @@
-<p>{{ title }}</p>
+<app-header [siteLogo]="siteLogo()"/>
+
+<div class="wrapper">
+  <router-outlet/>
+</div>
+
+<app-footer/>

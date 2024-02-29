@@ -44,10 +44,11 @@ namespace sushi_go.Services
 
                 return new RollProductModel
                 {
+                    Id = product.Id,
                     Name = product.Name,
                     Image = product.Value<MediaWithCrops>("image")?.MediaUrl() ?? "",
                     Description = product.Value<string>("description") ?? "",
-                    Ingredienst = product.Value<string>("ingredients")?.Split(", ", StringSplitOptions.RemoveEmptyEntries).ToList() ?? [],
+                    Ingredients = product.Value<string>("ingredients")?.Split(", ", StringSplitOptions.RemoveEmptyEntries).ToList() ?? [],
                     Weight = product.Value<int>("weight"),
                     Pieces = product.Value<int>("pieces"),
                     Price = product.Value<int>("price")
@@ -55,6 +56,26 @@ namespace sushi_go.Services
             })
             .WhereNotNull()
             .ToList();
+        }
+
+        public RollProductModel? GetRollById(int id)
+        {
+            var product = _umbracoHelper.Content(id);
+
+            if (product == null)
+                return null;
+
+            return new RollProductModel
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Image = product.Value<MediaWithCrops>("image")?.MediaUrl() ?? "",
+                Description = product.Value<string>("description") ?? "",
+                Ingredients = product.Value<string>("ingredients")?.Split(", ", StringSplitOptions.RemoveEmptyEntries).ToList() ?? [],
+                Weight = product.Value<int>("weight"),
+                Pieces = product.Value<int>("pieces"),
+                Price = product.Value<int>("price")
+            };
         }
     }
 }

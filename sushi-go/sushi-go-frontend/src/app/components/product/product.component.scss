@@ -1,0 +1,57 @@
+.wrapper {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        aspect-ratio: 1;
+        object-fit: contain;
+        width: 100%;
+        border-radius: 15px;
+        background-color: grey;
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .bottom-container {
+        display: flex;
+        flex-direction: column;
+     }
+
+    .info,
+    .row.gap-05 {
+        margin-top: auto;
+        margin-bottom: 10px;
+    }
+
+    .price-label {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .price {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+    .info {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+}

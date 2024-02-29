@@ -1,0 +1,7 @@
+<div class="comumn">
+    <div class="row wrap gap-2 space-between">
+        @for (product of products(); track product.id) {
+            <app-product [product]="product"></app-product>
+        }
+    </div>
+</div>

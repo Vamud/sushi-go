@@ -15,5 +15,13 @@ namespace sushi_go.Controllers
 
             return Ok(rolls);
         }
+
+        [HttpGet("rolls/{id}")]
+        public ActionResult GetRollById(int id)
+        {
+            var roll = _rollsMenuService.GetRollById(id);
+
+            return Ok(roll);
+        }
     }
 }

@@ -1,0 +1,29 @@
+<div class="column wrapper">
+    <div class="image-wrapper">
+        <img [src]="apiUrl + product()?.image" alt="Image of sushi">
+    </div>
+    <div class="info-wrapper">
+        <h2 class="title">{{ product()?.name }}</h2>
+        <ul>
+            @for (ingredient of product()?.ingredients; track ingredient) {
+                <li>
+                    <span>{{ ingredient }}</span>
+                </li>
+            }
+        </ul>
+        <div class="bottom-container">
+        <div class="row gap-05 info">
+            <span>{{ product()?.weight + ' gram /' }}</span>
+            <span>{{ product()?.pieces + ' pcs' }}</span>
+        </div>
+        
+        <div class="container">
+            <div class="row gap-05">
+                <span class="price">{{ product()?.price + ' UAH' }}</span>
+            </div>
+
+            <p-button label="Add to cart" [rounded]="true" [text]="true" [raised]="true"></p-button>
+        </div>
+    </div>
+    </div>
+</div>

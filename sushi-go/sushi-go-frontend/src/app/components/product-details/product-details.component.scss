@@ -1,0 +1,56 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+
+    .image-wrapper {
+
+        img {
+            aspect-ratio: 1;
+            object-fit: contain;
+            width: 100%;
+            border-radius: 15px;
+            background-color: grey;
+        }
+    }
+
+    .info-wrapper {
+        .title {
+            margin-left: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-inline-start: 0;
+        }
+
+        .container {
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .bottom-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .info,
+        .row.gap-05 {
+            margin-top: auto;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+        
+        .info {
+            font-weight: 300;
+            font-size: 1rem;
+        }
+    }
+}

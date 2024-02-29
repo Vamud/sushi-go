@@ -5,5 +5,6 @@ namespace sushi_go.Services.Interfaces
     public interface IRollsMenuService
     {
         List<RollProductModel> GetRollsMenu();
+        RollProductModel? GetRollById(int id);
     }
 }
