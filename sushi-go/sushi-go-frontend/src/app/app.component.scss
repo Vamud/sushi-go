@@ -1,9 +1,17 @@
 .wrapper {
     height: auto;
-    padding: 20px;
+    padding: 120px 20px 20px 20px;
     width: 100%;
 
     flex-grow: 1;
     box-sizing: border-box;
+}
+
+app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 

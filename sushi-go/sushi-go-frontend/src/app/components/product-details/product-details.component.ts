@@ -4,7 +4,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { ButtonModule } from 'primeng/button';
 
-import { CatalogService } from '../../services/catalog.service';
+import { MenuService } from '../../services/menu.service';
 import { Product } from '../../types/product.interface';
 import { environment } from '../../../environments/environment';
 
@@ -17,11 +17,11 @@ import { environment } from '../../../environments/environment';
 })
 export class ProductDetailsComponent {
   private activatedRoute = inject(ActivatedRoute);
-  private catalogService = inject(CatalogService);
+  private menuService = inject(MenuService);
   readonly apiUrl = environment.apiUrl;
 
   id = this.activatedRoute.snapshot.params['id'];
   product = toSignal(
-    this.catalogService.fetchProductById(this.id).pipe(map((data: Product) => data))
+    this.menuService.fetchProductById(this.id).pipe(map((data: Product) => data))
   )
 }

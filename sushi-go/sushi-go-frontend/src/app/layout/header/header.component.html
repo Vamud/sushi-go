@@ -1,4 +1,11 @@
-<header class="wrapper row full-center">
-    <img [src]="siteLogo" alt="Site logo image" class="logo">
-    <h1>SushiGo</h1>
+<header>
+    <a class="wrapper row full-center" routerLink="/">
+        <img [src]="siteLogo" alt="Site logo image" class="logo">
+        <h1>SushiGo</h1>
+    </a>
+    <div class="nav-wrapper">
+        <p-button label="Rolls" [text]="true" severity="secondary" class="nav-link" routerLink="/rolls"></p-button>
+        <p-button label="Sets" [text]="true" severity="secondary" class="nav-link" routerLink="/sets"></p-button>
+        <p-button label="About Us" [text]="true" severity="secondary" class="nav-link" routerLink="/about-us"></p-button>
+    </div>
 </header>

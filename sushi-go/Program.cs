@@ -21,7 +21,7 @@ builder.Services.AddCors(options =>
         .AllowAnyHeader());
 });
 
-builder.Services.AddTransient<IRollsMenuService, RollsMenuService>();
+builder.Services.AddTransient<IMenuService, MenuService>();
 builder.Services.AddTransient<ISiteSettingsService, SiteSettingsService>();
 
 WebApplication app = builder.Build();
